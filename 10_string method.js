@@ -1,38 +1,56 @@
 // 字串方法用來處理和操作文字資料，常見的用途包含尋找內容、切割與組合、以及變更大小寫
 
-let name1 = "Verstappen";
-let name2 = "Verstappen    ";
+let name1 = "JavaScript";
+let name2 = "JavaScript    ";
 let email = "test123@gmail.com";
 let phoneNumber = "123-456-789";
 
-console.log(name1.charAt(0)); // V，charAt():尋找該數字位置的字元
+// -------------------------------------------------------------------------------------------------------
+// 1. 尋找與判斷
+// -------------------------------------------------------------------------------------------------------
 
-console.log(name1.indexOf("p")); // 6，indexOf():尋找子字串第一次出現的位置，找不到回傳 -1
+console.log(name1.indexOf("a")); // 1，indexOf():尋找子字串第一次出現的索引位置，找不到回傳 -1
 
-console.log(name1.lastIndexOf("p")); // 8，lastIndexOf():尋找子字串最後一次出現的位置，找不到回傳 -1
+console.log(name1.lastIndexOf("a")); // 3，lastIndexOf():尋找子字串最後一次出現的索引位置，找不到回傳 -1
+
+console.log(name1.startsWith(" ")); // false，startsWith():檢查字串開頭是否為指定的子字串，回傳true或false
+
+console.log(name2.endsWith(" ")); // true，endsWith():檢查字串結尾是否為指定的子字串，回傳true或false
+
+console.log(email.includes("@")); // true，includes():檢查字串結尾是否為指定的子字串，回傳true或false
+
+// -------------------------------------------------------------------------------------------------------
+// 2. 擷取文字
+// -------------------------------------------------------------------------------------------------------
+
+console.log(name1.charAt(0)); // J，charAt(索引值):取得指定數字位置(index)的單一字元
+
+console.log(name1.slice(0, 4)); // Java，slice(起點, 終點):切割並回傳起點到終點(不含終點)範圍內的子字串
+
+// -------------------------------------------------------------------------------------------------------
+// 3. 大小寫與空白格式化
+// -------------------------------------------------------------------------------------------------------
+
+console.log(name2.trim()); // trim():去除字串頭尾的空白字元
+
+console.log(name1.toUpperCase()); // JAVASCRIPT，toUpperCase():將整個字串轉換為大寫
+
+console.log(name1.toLowerCase()); // javascript，toLowerCase():將整個字串轉換為小寫
+
+// -------------------------------------------------------------------------------------------------------
+// 4. 內容修改、補齊與重複
+// -------------------------------------------------------------------------------------------------------
+
+console.log(name1.repeat(2)); // JavaScriptJavaScript，repeat(次數):將原字串重複指定的次數並串接起來
+
+console.log(phoneNumber.replaceAll("-", "/")); // 123 / 456 / 789，replaceAll(舊字串, 新字串):將字串中所有符合的舊字串替換成新字串
+
+console.log(phoneNumber.padStart(15, "0")); // 0000123-456-789，padStart(總長度, 填充字串):從字串前方開始補齊指定的字元，直到滿足設定的總長度
+
+console.log(phoneNumber.padEnd(15, "0")); // 123-456-7890000，padEnd(總長度, 填充字串):從字串後方開始補齊指定的字元，直到滿足設定的總長度
+
+// -------------------------------------------------------------------------------------------------------
+// 5. 字串屬性
+// -------------------------------------------------------------------------------------------------------
 
 console.log(name1.length); // 10，.length:計算字串長度
-
-console.log(name2.trim()); // trim:去除空格
-
-//-------------------------------------------------------------------------------------------------------
-
-console.log(name1.toUpperCase()); // VERSTAPPEN，toUpperCase():把整個字串變成大寫
-
-console.log(name1.toLowerCase()); // verstappen，toLowerCase():把整個字串變成小寫
-
-console.log(name1.repeat(2)); // VerstappenVerstappen，repeat():把字串做重複，括號內為想重複的次數
-
-console.log(name1.startsWith(" ")); // false，startsWith():檢查該字串開頭是否有包含括號內的子字串
-
-console.log(name2.endsWith(" ")); // true，endsWith():檢查該字串結尾是否有包含括號內的子字串
-
-console.log(email.includes("@")); // true，includes():檢查該字串是否有包含括號內的子字串
-
-//-------------------------------------------------------------------------------------------------------
-
-console.log(phoneNumber.replaceAll("-", "/")); // 123 / 456 / 789，replaceAll(要被取代的字串, 想要替代的字串)
-
-console.log(phoneNumber.padStart(15, "0")); // 0000123-456-789，padStart(要湊到的字串長度, 湊長度的子字串)，從原字串的前面開始湊
-
-console.log(phoneNumber.padEnd(15, "0")); // 123-456-7890000，padEnd(要湊到的字串長度, 湊長度的子字串)，從原字串的後面開始湊
