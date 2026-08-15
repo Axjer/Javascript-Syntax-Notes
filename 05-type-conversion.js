@@ -1,4 +1,4 @@
-// 型別轉換：將一個值的資料轉換成另一種型別（Number, String, Boolean）
+// 型別轉換：將一個值的資料轉換成另一種型別(Number, String, Boolean)
 
 let age1 = window.prompt("How old are you?");
 age1 += 1;

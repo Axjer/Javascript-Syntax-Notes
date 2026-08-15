@@ -25,6 +25,7 @@ console.log(y);
 
 const z = 5;
 console.log(z); // 5
+
 /*
 若執行這段程式碼，此時會出現SyntaxError
 const z = 6;

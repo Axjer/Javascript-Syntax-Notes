@@ -1,4 +1,4 @@
-// 條件判斷:可以用來有效替代許多if{} else{} 陳述式的語法
+// 條件判斷：可以用來有效替代許多if{} else{} 陳述式的語法
 
 let day = 1;
 
@@ -28,7 +28,8 @@ switch (day) {
     console.log(`${day} is not a day`);
 }
 
-// 如果沒有加上break，就會輸出多個結果，例如day = 2，會輸出case 2 ~ case 7和default的結果
+// 如果沒有加上break，就會輸出多個結果
+// 例如day = 2，會輸出case 2 ~ case 7和default的結果
 
 let score = 91;
 let grade;
